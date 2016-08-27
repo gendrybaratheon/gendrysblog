@@ -7,3 +7,6 @@ Homestead.json
 /.idea
 _ide_helper.php
 .bowerrc
+
+/public/build
+/public/assets
