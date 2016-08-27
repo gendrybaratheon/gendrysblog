@@ -1,0 +1,55 @@
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.postlist {
+    padding-top: 30px;
+    background-color: #504657;
+    color: #ddd;
+}
+
+.post {
+    padding-top: 30px;
+}
+
+header {
+    background-color: #504657;
+}
+.navbar-nav > li {
+    margin-left: 20px;
+    font-weight: bold;
+}
+.navbar-nav > li > a.active {
+    color: #14cc71;
+}
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover {
+    background-color: #504657;
+}
+
+.icon-bar {
+    background-color: #FFFFFF;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 12px;
+    margin-top: 0px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border: 2px solid #ddd !important;
+}
+
+a {
+    color: #FFFFFF;
+}
+a:hover,
+a:focus {
+    color: #c0c0c0;
+    text-decoration: none;
+}
