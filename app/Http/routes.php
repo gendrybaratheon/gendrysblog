@@ -1,16 +1,19 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => 'web'], function () {
+    Route::get('/', 'PostController@index');
+    Route::get('post/{id}','PostController@showPost');
 });
+
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+    Route::get('/{vue_capture?}', function () {
+        return view('admin.index');
+    });
+});
+
+Route::group(['prefix' => 'api', 'middleware' => 'api', 'namespace' => 'Api'], function () {
+    Route::resource('post', 'PostController');
+    Route::get('getUser', 'UserController@getUser');
+});
+
+Route::auth();

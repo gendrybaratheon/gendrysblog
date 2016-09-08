@@ -158,6 +158,8 @@ return [
 
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
+        Cyvelnet\Laravel5Fractal\Laravel5FractalServiceProvider::class,
+
     ],
 
     /*
@@ -204,6 +206,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Fractal' => Cyvelnet\Laravel5Fractal\Facades\Fractal::class,
     ],
 
 ];

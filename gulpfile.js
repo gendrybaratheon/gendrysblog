@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-vueify');
+
 elixir.config.sourcemaps = false; // 不生成 *.css.map 文件
 
 elixir(function(mix) {
@@ -18,12 +20,17 @@ elixir(function(mix) {
 
     // 迁移 JS 文件
     mix.scripts(['jquery.js', 'bootstrap.js'], 'public/assets/js/app.js');
+    mix.scripts(['jquery.js', 'bootstrap.js'], 'public/assets/js/admin.js');
+
+    mix.browserify(['admin/main.js'], 'public/assets/js/admin-vue.js');
 
     // 添加版本号 -- 相对于 public 路径
     mix.version([
         'assets/css/app.css',
         'assets/css/admin.css',
-        'assets/js/app.js'
+        'assets/js/app.js',
+        'assets/js/admin.js',
+        'assets/js/admin-vue.js'
     ]);
 
 });
